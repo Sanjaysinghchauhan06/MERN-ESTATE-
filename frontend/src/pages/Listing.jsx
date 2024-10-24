@@ -23,7 +23,7 @@ export default function Listing() {
   const [listing, setListing] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState(false); 
   const [contact, setContact] = useState(false);
   const params = useParams();
   const { currentUser } = useSelector((state) => state.user);
@@ -35,7 +35,7 @@ export default function Listing() {
         const res = await fetch(`/api/listing/get/${params.listingId}`);
         const data = await res.json();
         if (data.success === false) {
-          setError(true);
+          setError(true); 
           setLoading(false);
           return;
         }
